@@ -65,11 +65,11 @@
   </entry>
   
   <entry>
-    <title>JavaScriot</title>
+    <title>用户验证token流程</title>
     <link href="http://yoursite.com/2019/07/29/%E7%94%A8%E6%88%B7token%E9%AA%8C%E8%AF%81%E6%9D%83%E9%99%90/"/>
     <id>http://yoursite.com/2019/07/29/%E7%94%A8%E6%88%B7token%E9%AA%8C%E8%AF%81%E6%9D%83%E9%99%90/</id>
     <published>2019-07-29T13:47:06.000Z</published>
-    <updated>2020-07-12T09:39:11.864Z</updated>
+    <updated>2020-07-12T09:59:51.303Z</updated>
     
     <content type="html"><![CDATA[<h2 id="前端登录访问页面验证token权限具体步骤"><a href="#前端登录访问页面验证token权限具体步骤" class="headerlink" title="前端登录访问页面验证token权限具体步骤"></a>前端登录访问页面验证token权限具体步骤</h2><p>1、第一次登录的时候，前端调后端的登陆接口，发送用户名和密码</p><p>2、后端收到请求，验证用户名和密码，验证成功，就给前端返回一个token</p><p>3、前端拿到token，将token存储到localStorage和vuex中，并跳转路由页面</p><p>4、前端每次跳转路由，就判断 localStroage 中有无 token ，没有就跳转到登录页面，有则跳转到对应路由页面</p><p>5、每次调后端接口，都要在请求头中加token</p><p>6、后端判断请求头中有无token，有token，就拿到token并验证token，验证成功就返回数据，验证失败（例如：token过期）就返回401，请求头中没有token也返回401</p><p>7、如果前端拿到状态码为401，就清除token信息并跳转到登录页面</p><p><strong>详情请见：<a href="https://www.cnblogs.com/xuzhenlei/p/12427122.html" target="_blank" rel="noopener">https://www.cnblogs.com/xuzhenlei/p/12427122.html</a></strong> </p>]]></content>
     
